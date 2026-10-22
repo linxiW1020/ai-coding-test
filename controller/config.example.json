@@ -1,0 +1,30 @@
+{
+  "repo_path": "REPLACE_WITH_ABSOLUTE_PILOT_PATH",
+  "repo_url": "https://github.com/linxiW1020/ai-coding-test",
+  "base_branch": "main",
+  "implementation_mode": "patch",
+  "codex_path": "codex",
+  "runtime_dir": "REPLACE_WITH_ABSOLUTE_RUNTIME_PATH_OUTSIDE_MODEL_WORKTREE",
+  "grants": {
+    "approved_by": "", "approved_at": "",
+    "repo_url": "https://github.com/linxiW1020/ai-coding-test",
+    "task_ids": ["pilot-ci-status-001"],
+    "commit": false, "push": false, "create_pr": false, "merge": false
+  },
+  "merge_policy": {
+    "enabled": false, "approved_by": "", "approved_at": "",
+    "repo_url": "https://github.com/linxiW1020/ai-coding-test",
+    "base_branch": "main",
+    "allowed_paths": ["src/**", "tests/test_ci_status.py"],
+    "required_checks": ["verify"],
+    "required_local_checks": ["verify", "acceptance"],
+    "max_changed_files": 5,
+    "max_evidence_age_seconds": 900
+  },
+  "limits": {
+    "max_iterations": 3, "max_model_calls": 10, "max_seconds": 1200,
+    "command_timeout": 180, "no_progress_limit": 2,
+    "max_ci_polls": 3, "ci_poll_interval_seconds": 15
+  },
+  "protected_paths": ["controller/**", ".github/**", ".codex/**", "AGENTS.md"]
+}
